@@ -23,15 +23,20 @@ public class foguete : MonoBehaviour {
             rigidBody.AddRelativeForce(Vector3.forward);
             print("acelerando");  // Ação Realizada pelo comando
         }
-        if (Input.GetKey(KeyCode.A)) // Comando utilizado para identificar uma tecla pressionada
-        {
-            transform.Rotate(-Vector3.right);
-            print("giro esquerda"); // Ação Realizada pelo comando
-        }
-        else if (Input.GetKey(KeyCode.D)) // Comando utilizado para identificar uma tecla pressionada
-        {
-            transform.Rotate(-Vector3.left);
-            print("giro direita"); // Ação Realizada pelo comando
-        }
+
+		if (Input.GetKey(KeyCode.A))
+		{
+		rigidBody.AddRelativeForce(Vector3.left);
+		print("girandoesquerda");
+		}
+
+		if (Input.GetKey(KeyCode.D))
+		{
+		rigidBody.AddRelativeForce(Vector3.right);
+		print("girandodireita");
+		}
+
+        
+        
     }
 }
